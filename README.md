@@ -33,14 +33,7 @@
 
 ### 2.向快手注册您的应用id和universalLinks
 
-发邮件至 [wangchaogang@kuaishou.com](mailto:guoyu03@kuaishou.com) ，邮件包含以下信息
-
-1.  App 名称 。
-2. App bundle id 。
-3. App 支持的universalLink。
-4. 图标 ( 不小于 512 * 512 ) , 直角。
-
-以上信息将会显示在快手 App 三方授权页上。
+详见https://docs.qq.com/doc/DRndDUmJldkNNQWNa
 
 申请成功后，得到 AppId 和 AppSecret, 客户端接入只需要 AppId , 服务器同时需要 AppId 和 AppSecret。
 
