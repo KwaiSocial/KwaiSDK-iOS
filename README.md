@@ -27,8 +27,8 @@
 
 #### **2）打开Associated Domains开关，将Universal Links域名加到配置上**
 
-![image](http://git.corp.kuaishou.com/gaomingbo/kwaisharesdk/uploads/13d464f81ce967114899db69a7ec6ae3/image.png)
-
+![image](https://user-images.githubusercontent.com/62368093/82444779-53554f00-9ad6-11ea-970a-46c4e3d55b68.png)
+ 
 
 
 ### 2.向快手注册您的应用id和universalLinks
@@ -65,7 +65,7 @@ pod 'KwaiSDK' ,'3.3.1'
 
 在 Xcode 中，选择你的工程设置项，选中“TARGETS”一栏，在“info”标签栏的“URL type“添加“URL scheme”为你所注册的应用程序 id（如下图所示）。
 
-![image](http://git.corp.kuaishou.com/gaomingbo/kwaisharesdk/uploads/f05acad43b333ee2c4118dbf5bc747b1/image.png)
+![image](https://user-images.githubusercontent.com/62368093/82444842-6405c500-9ad6-11ea-9aad-5cd0119ac671.png)
 
 在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在 “info”标签栏的“LSApplicationQueriesSchemes“添加 **kwai kwaiAuth2 kwaiopenapi KwaiBundleToken kwai.clip.multi KwaiSDKMediaV2**
 
