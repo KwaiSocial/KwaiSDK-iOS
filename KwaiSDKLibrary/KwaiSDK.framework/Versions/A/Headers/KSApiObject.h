@@ -56,6 +56,11 @@ typedef NS_ENUM(NSInteger, KSShareMediaFeature) {
     KSShareMediaFeature_VideoPublish,
 };
 
+typedef NS_ENUM(NSInteger, KSApiApplication) {
+    KSApiApplication_Kwai = 0,
+    KSApiApplication_KwaiLite,
+};
+
 #pragma mark -KSBase
 
 /// 该类为快手终端SDK所有请求类的基类
@@ -66,6 +71,11 @@ typedef NS_ENUM(NSInteger, KSShareMediaFeature) {
 
 /// 第三方经过快手授权登录授权后得到的openID, 如果当前发起的业务不需要登录授权, 可不传
 @property (nonatomic, copy, nullable) NSString *openID;
+
+/// 设置当前request期望使用的快手体系终端，支持的终端见KSApiApplication
+/// 数组内可以设置一个或多个KSApiApplication，SDK内部会按照顺序优先使用可用的终端，若数组为空或不设置则默认使用快手App
+/// 目前仅授权登陆KSAuthRequest可以生效
+@property (nonatomic, copy, nullable) NSArray<NSNumber *> *applicationList;
 
 @end
 
@@ -87,9 +97,6 @@ typedef NS_ENUM(NSInteger, KSShareMediaFeature) {
 
 /// 第三方程序向快手终端请求认证的消息结构
 @interface KSAuthRequest : KSBaseRequest
-
-/// 授权的类型，暂只支持"code"
-@property (nonatomic, copy) NSString *authType;
 
 /// 需要获得的权限，多个用“,”链接。比如user_info,relation等
 @property (nonatomic, copy) NSString *scope;

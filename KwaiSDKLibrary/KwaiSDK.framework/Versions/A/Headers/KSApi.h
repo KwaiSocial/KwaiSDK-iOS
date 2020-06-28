@@ -48,9 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
       universalLink:(NSString *)universalLink
            delegate:(nullable id<KSApiDelegate>)delegate;
 
-/// 检查快手是否已经被用户安装
-/// @return 快手已安装返回YES，未安装返回NO
-+ (BOOL)isKSAppInstalled;
+/// 检查目标app是否已经被用户安装
+/// @return 已安装返回YES，未安装返回NO
++ (BOOL)isAppInstalledFor:(KSApiApplication)application;
 
 /// 判断当前快手APP是否支持快手开放SDK
 /// 支持返回YES，不支持返回NO
