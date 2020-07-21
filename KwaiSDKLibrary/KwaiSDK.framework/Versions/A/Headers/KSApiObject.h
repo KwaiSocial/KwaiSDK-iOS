@@ -49,11 +49,12 @@ typedef NS_ENUM(NSInteger,KSShareScene) {
 };
 
 typedef NS_ENUM(NSInteger, KSShareMediaFeature) {
-    KSShareMediaFeature_Undefine = -1,
-    KSShareMediaFeature_Preprocess = 0,
-    KSShareMediaFeature_VideoEdit,
-    KSShareMediaFeature_PictureEdit,
-    KSShareMediaFeature_VideoPublish,
+    KSShareMediaFeature_Undefine     = -1,      /**< 未设置功能 */
+    KSShareMediaFeature_Preprocess   = 0,       /**< 裁剪功能 */
+    KSShareMediaFeature_VideoEdit    = 1,       /**< 视频编辑功能 */
+    KSShareMediaFeature_PictureEdit  = 2,       /**< 图片编辑功能 */
+    KSShareMediaFeature_VideoPublish = 3,       /**< 视频发布功能 */
+    KSShareMediaFeature_AICut        = 4,       /**< 智能裁剪功能 */
 };
 
 typedef NS_ENUM(NSInteger, KSApiApplication) {
