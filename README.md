@@ -67,7 +67,7 @@ pod 'KwaiSDK' ,'3.4.2'
 
 ![image](https://user-images.githubusercontent.com/62368093/82444842-6405c500-9ad6-11ea-9aad-5cd0119ac671.png)
 
-在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在 “info”标签栏的“LSApplicationQueriesSchemes“添加 **kwai kwaiAuth2 kwaiopenapi KwaiBundleToken kwai.clip.multi KwaiSDKMediaV2**
+在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在 “info”标签栏的“LSApplicationQueriesSchemes“添加 **kwai kwaiAuth2 kwaiopenapi KwaiBundleToken kwai.clip.multi KwaiSDKMediaV2 ksnebula**
 
 在实际开发中，需要把示例例中的 **ks685673047210945076** 替换成⾃己的 **appId**
 
