@@ -199,7 +199,7 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
 @property (nonatomic, copy) NSArray<KSShareMediaAsset *> *multipartAssets;
 
 /// 第三方扩展信息
-@property (nonatomic, copy, nullable) NSString *extraInfo;
+@property (nonatomic, copy, nullable) NSDictionary *extraEntity;
 
 @end
 
