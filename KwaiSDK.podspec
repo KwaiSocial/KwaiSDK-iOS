@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
     s.license          = { :type => "MIT" }
     s.source           = { :git => "https://github.com/KwaiSocial/KwaiSDK-iOS.git", :tag => s.version.to_s }
     s.vendored_frameworks = "KwaiSDKLibrary/KwaiSDK.framework"
+    s.resources          = "KwaiSDKLibrary/KwaiSDK.framework/Versions/A/Resources/KwaiSDK.bundle"
     s.ios.deployment_target = "8.0"
-    s.resource_bundles = {"KwaiSDK" => ["KwaiSDK/Resources/**/*"]}
     s.static_framework = true
     s.frameworks = "WebKit"
 end
