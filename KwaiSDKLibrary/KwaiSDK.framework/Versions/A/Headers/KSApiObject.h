@@ -78,6 +78,9 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
 /// 目前仅授权登陆KSAuthRequest可以生效
 @property (nonatomic, copy, nullable) NSArray<NSNumber *> *applicationList;
 
+/// 设置当前请求的额外字段，如无特殊需求可以不设置
+@property (nonatomic, copy, nullable) NSDictionary *requestExtraInfo;
+
 @end
 
 /// 该类为快手终端SDK所有响应类的基类
@@ -198,7 +201,7 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
 /// 分段媒体资源
 @property (nonatomic, copy) NSArray<KSShareMediaAsset *> *multipartAssets;
 
-/// 第三方扩展信息
+/// 第三方媒体相关扩展信息
 @property (nonatomic, copy, nullable) NSDictionary *extraEntity;
 
 @end

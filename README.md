@@ -46,7 +46,7 @@
 ##### (1)通过cocoapods集成
 
 ```ruby
-pod 'KwaiSDK' ,'3.4.5'
+pod 'KwaiSDK' ,'3.4.6'
 ```
 
 ##### (2)手动集成
