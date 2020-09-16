@@ -14,7 +14,9 @@
 
 #### **（1）根据 [苹果文档](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) 配置你应用的Universal Links：**
 
-快手对Universal Links要求：必须支持HTTPS，配置的paths不能带query参数，App配置的paths必须加上通配符/*。
+快手对Universal Links要求：必须支持HTTPS，配置的paths不能带query参数，App配置的paths必须加上通配符/*，
+
+并且配置到快手的Universal Links需要以"/"结尾，便于快手SDK拼接参数能够正常完成跳转。
 
 示例:
 
@@ -28,10 +30,28 @@
 #### **2）打开Associated Domains开关，将Universal Links域名加到配置上**
 
 ![image](https://user-images.githubusercontent.com/62368093/82444779-53554f00-9ad6-11ea-970a-46c4e3d55b68.png)
- 
 
+#### **3）验证您的Universal Links是否生效**
 
-### 2.向快手注册您的应用id和universalLinks
+Safari输入Universal Links(包括完整路径)+随机字符串(例如: abc)
+
+举例：
+
+配置到快手的Universal Links如下
+
+```tex
+https://kuaishou.com/sdksample/
+```
+
+测试输入Safari的Universal Links：
+
+```tex
+https://kuaishou.com/sdksample/abc
+```
+
+检查下拉页面检查是否有打开app的入口提示
+
+### 2.向快手注册您的应用id和Universal Links
 
 详见https://docs.qq.com/doc/DRndDUmJldkNNQWNa
 
@@ -69,7 +89,7 @@ pod 'KwaiSDK' ,'3.4.6'
 
 在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在 “info”标签栏的“LSApplicationQueriesSchemes“添加 **kwai kwaiAuth2 kwaiopenapi KwaiBundleToken kwai.clip.multi KwaiSDKMediaV2 ksnebula**
 
-在实际开发中，需要把示例例中的 **ks685673047210945076** 替换成⾃己的 **appId**
+在实际开发中，需要把示例例中的 **ks685673047210945076** 替换成⾃己的 **appId**
 
 #### 3.3 在代码中使用开发工具包
 
@@ -227,4 +247,3 @@ request.mediaObject = object;
 ```
 
 目前mediaFeature支持了不同能生产页面跳转功能。
-
