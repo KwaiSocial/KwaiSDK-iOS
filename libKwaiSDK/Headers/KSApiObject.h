@@ -51,9 +51,9 @@ typedef NS_ENUM(NSInteger,KSShareScene) {
 typedef NS_ENUM(NSInteger, KSShareMediaFeature) {
     KSShareMediaFeature_Undefine     = -1,      /**< 未设置功能 */
     KSShareMediaFeature_Preprocess   = 0,       /**< 裁剪功能 */
-    KSShareMediaFeature_VideoEdit    = 1,       /**< 视频编辑功能 */
+    KSShareMediaFeature_VideoEdit    = 1,       /**< 视频编辑功能，该能力需要申请权限 */
     KSShareMediaFeature_PictureEdit  = 2,       /**< 图片编辑功能 */
-    KSShareMediaFeature_VideoPublish = 3,       /**< 视频发布功能 */
+    KSShareMediaFeature_VideoPublish = 3,       /**< 视频发布功能，该能力需要申请权限 */
     KSShareMediaFeature_AICut        = 4,       /**< 智能裁剪功能 */
 };
 
@@ -85,12 +85,8 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
 
 /// 该类为快手终端SDK所有响应类的基类
 @interface KSBaseResponse : NSObject
-
-/// 错误码，详见 KSErrorCode
-@property (nonatomic, assign) NSInteger errorCode;
-
-/// 错误信息
-@property (nonatomic, copy) NSString *errorMessage;
+/// 错误码详见 KSErrorCode
+@property (nonatomic, strong) NSError *error;
 
 /// 状态值，从KSBaseRequest传入，由KSBaseResponse原样带回
 @property (nonatomic, copy) NSString *state;
@@ -192,7 +188,7 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
 /// 例如：没有发布页权限的时候回落到裁剪页
 @property (nonatomic, assign) BOOL disableFallback;
 
-/// 视频标签，可以为多个
+/// 视频标签，可以为多个，该能力需要申请权限
 @property (nonatomic, copy, nullable) NSArray<NSString *> *tags;
 
 /// 视频封面资源，支持分享到发布页, 注意这里的封面尺寸应该和media资源尺寸保持一致否则失效
@@ -201,7 +197,7 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
 /// 分段媒体资源
 @property (nonatomic, copy) NSArray<KSShareMediaAsset *> *multipartAssets;
 
-/// 第三方媒体相关扩展信息
+/// 第三方媒体相关扩展信息，该能力需要申请权限
 @property (nonatomic, copy, nullable) NSDictionary *extraEntity;
 
 @end
