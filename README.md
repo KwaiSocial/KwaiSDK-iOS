@@ -66,7 +66,7 @@ https://kuaishou.com/sdksample/abc
 ##### (1)通过cocoapods集成
 
 ```ruby
-pod 'KwaiSDK' ,'3.4.9'
+pod 'KwaiSDK' ,'3.6.2'
 ```
 
 ##### (2)手动集成
