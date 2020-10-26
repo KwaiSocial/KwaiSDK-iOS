@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A4A6B36BBC4E76E83CC4E8E /* Pods_KwaiOpenSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31D11E2CBE760FB49E778C2 /* Pods_KwaiOpenSDKDemo.framework */; };
+		B92D123B2446ECF00072DD17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D123A2446ECF00072DD17 /* AppDelegate.swift */; };
+		B92D123D2446ECF00072DD17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D123C2446ECF00072DD17 /* SceneDelegate.swift */; };
+		B92D123F2446ECF00072DD17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D123E2446ECF00072DD17 /* ViewController.swift */; };
+		B92D12422446ECF00072DD17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92D12402446ECF00072DD17 /* Main.storyboard */; };
+		B92D12442446ECF00072DD17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92D12432446ECF00072DD17 /* Assets.xcassets */; };
+		B92D12472446ECF00072DD17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92D12452446ECF00072DD17 /* LaunchScreen.storyboard */; };
+		B92D12522446ED160072DD17 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D12512446ED160072DD17 /* WebKit.framework */; };
+		B92D12572446EE620072DD17 /* KSShareApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D12562446EE620072DD17 /* KSShareApiManager.swift */; };
+		B92D125C2446F0BE0072DD17 /* KSShareApiAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D125B2446F0BE0072DD17 /* KSShareApiAuthManager.swift */; };
+		B94B44C42530622C0056AC3A /* KSConfigCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B44C32530622C0056AC3A /* KSConfigCenter.swift */; };
+		B9CDF14A246D78F800EA7F4F /* KSShareApiMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDF149246D78F800EA7F4F /* KSShareApiMessageManager.swift */; };
+		B9CDF14D246D7C7300EA7F4F /* KSShareApiProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDF14C246D7C7300EA7F4F /* KSShareApiProfileManager.swift */; };
+		B9CDF150246D827200EA7F4F /* KSShareApiMeidaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDF14F246D827200EA7F4F /* KSShareApiMeidaViewController.swift */; };
+		B9E679432546D5C300804148 /* KwaiSDK.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = B9E6793C2546D5C300804148 /* KwaiSDK.podspec.json */; };
+		B9E679442546D5C300804148 /* libKwaiSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E6793E2546D5C300804148 /* libKwaiSDK.a */; };
+		B9E679452546D5C300804148 /* source.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9E6793F2546D5C300804148 /* source.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24353408B43DF0A70B486157 /* libPods-KwaiOpenSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KwaiOpenSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FDDE7C98529F96C525DA49C /* Pods-KwaiOpenSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwaiOpenSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-KwaiOpenSDKDemo/Pods-KwaiOpenSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		53D84E7EA2E3022EC1416437 /* Pods-KwaiOpenSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwaiOpenSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-KwaiOpenSDKDemo/Pods-KwaiOpenSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		59914DCB3940F8C436C647B5 /* Pods-KwaiOpenSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwaiOpenSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-KwaiOpenSDKDemo/Pods-KwaiOpenSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B92D12372446ECF00072DD17 /* KwaiOpenSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KwaiOpenSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92D123A2446ECF00072DD17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B92D123C2446ECF00072DD17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B92D123E2446ECF00072DD17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B92D12412446ECF00072DD17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B92D12432446ECF00072DD17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B92D12462446ECF00072DD17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B92D12482446ECF00072DD17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B92D12512446ED160072DD17 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B92D12532446ED2C0072DD17 /* KwaiOpenSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KwaiOpenSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		B92D12562446EE620072DD17 /* KSShareApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSShareApiManager.swift; sourceTree = "<group>"; };
+		B92D125B2446F0BE0072DD17 /* KSShareApiAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSShareApiAuthManager.swift; sourceTree = "<group>"; };
+		B94B44C32530622C0056AC3A /* KSConfigCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSConfigCenter.swift; sourceTree = "<group>"; };
+		B9A5703D245817C10086DDA1 /* KwaiOpenSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KwaiOpenSDKDemo.entitlements; sourceTree = "<group>"; };
+		B9CDF149246D78F800EA7F4F /* KSShareApiMessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSShareApiMessageManager.swift; sourceTree = "<group>"; };
+		B9CDF14C246D7C7300EA7F4F /* KSShareApiProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSShareApiProfileManager.swift; sourceTree = "<group>"; };
+		B9CDF14F246D827200EA7F4F /* KSShareApiMeidaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSShareApiMeidaViewController.swift; sourceTree = "<group>"; };
+		B9E6793C2546D5C300804148 /* KwaiSDK.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KwaiSDK.podspec.json; sourceTree = "<group>"; };
+		B9E6793E2546D5C300804148 /* libKwaiSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKwaiSDK.a; sourceTree = "<group>"; };
+		B9E6793F2546D5C300804148 /* source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source.txt; sourceTree = "<group>"; };
+		B9E679412546D5C300804148 /* KSApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSApiObject.h; sourceTree = "<group>"; };
+		B9E679422546D5C300804148 /* KSApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSApi.h; sourceTree = "<group>"; };
+		BB6A58C8F0BEAE24E171EAF5 /* Pods-KwaiOpenSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwaiOpenSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-KwaiOpenSDKDemo/Pods-KwaiOpenSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C31D11E2CBE760FB49E778C2 /* Pods_KwaiOpenSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KwaiOpenSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B92D12342446ECF00072DD17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E679442546D5C300804148 /* libKwaiSDK.a in Frameworks */,
+				1A4A6B36BBC4E76E83CC4E8E /* Pods_KwaiOpenSDKDemo.framework in Frameworks */,
+				B92D12522446ED160072DD17 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29E15AD5CB91E3DBBF28FF0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59914DCB3940F8C436C647B5 /* Pods-KwaiOpenSDKDemo.debug.xcconfig */,
+				53D84E7EA2E3022EC1416437 /* Pods-KwaiOpenSDKDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B92D122E2446ECF00072DD17 = {
+			isa = PBXGroup;
+			children = (
+				B94B44D3253063CB0056AC3A /* Supports */,
+				B92D12392446ECF00072DD17 /* KwaiOpenSDKDemo */,
+				29E15AD5CB91E3DBBF28FF0A /* Pods */,
+				BE5FC05DF3DECE07C6CE71BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B92D12382446ECF00072DD17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B92D12372446ECF00072DD17 /* KwaiOpenSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B92D12392446ECF00072DD17 /* KwaiOpenSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B92D12482446ECF00072DD17 /* Info.plist */,
+				B92D12532446ED2C0072DD17 /* KwaiOpenSDKDemo-Bridging-Header.h */,
+				B9A5703D245817C10086DDA1 /* KwaiOpenSDKDemo.entitlements */,
+				B92D123A2446ECF00072DD17 /* AppDelegate.swift */,
+				B92D123E2446ECF00072DD17 /* ViewController.swift */,
+				B94B44C32530622C0056AC3A /* KSConfigCenter.swift */,
+				B92D12582446F0970072DD17 /* ShareApi */,
+			);
+			path = KwaiOpenSDKDemo;
+			sourceTree = "<group>";
+		};
+		B92D12502446ED160072DD17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B92D12512446ED160072DD17 /* WebKit.framework */,
+				24353408B43DF0A70B486157 /* libPods-KwaiOpenSDKDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B92D12582446F0970072DD17 /* ShareApi */ = {
+			isa = PBXGroup;
+			children = (
+				B9CDF14E246D7D2D00EA7F4F /* Media */,
+				B9CDF14B246D7C5E00EA7F4F /* Profile */,
+				B9CDF148246D78DA00EA7F4F /* Message */,
+				B92D125A2446F0AC0072DD17 /* Auth */,
+				B92D12592446F0A30072DD17 /* Core */,
+			);
+			path = ShareApi;
+			sourceTree = "<group>";
+		};
+		B92D12592446F0A30072DD17 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B92D12562446EE620072DD17 /* KSShareApiManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B92D125A2446F0AC0072DD17 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B92D125B2446F0BE0072DD17 /* KSShareApiAuthManager.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		B94B44D3253063CB0056AC3A /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				B9E6793B2546D5C300804148 /* libKwaiSDK */,
+				B92D12382446ECF00072DD17 /* Products */,
+				B92D12502446ED160072DD17 /* Frameworks */,
+				D2566620D89791F19E449A48 /* Pods */,
+				B92D12402446ECF00072DD17 /* Main.storyboard */,
+				B92D123C2446ECF00072DD17 /* SceneDelegate.swift */,
+				B92D12432446ECF00072DD17 /* Assets.xcassets */,
+				B92D12452446ECF00072DD17 /* LaunchScreen.storyboard */,
+			);
+			name = Supports;
+			sourceTree = "<group>";
+		};
+		B9CDF148246D78DA00EA7F4F /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				B9CDF149246D78F800EA7F4F /* KSShareApiMessageManager.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		B9CDF14B246D7C5E00EA7F4F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B9CDF14C246D7C7300EA7F4F /* KSShareApiProfileManager.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B9CDF14E246D7D2D00EA7F4F /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				B9CDF14F246D827200EA7F4F /* KSShareApiMeidaViewController.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		B9E6793B2546D5C300804148 /* libKwaiSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B9E6793C2546D5C300804148 /* KwaiSDK.podspec.json */,
+				B9E6793D2546D5C300804148 /* ios */,
+				B9E6793F2546D5C300804148 /* source.txt */,
+				B9E679402546D5C300804148 /* Headers */,
+			);
+			name = libKwaiSDK;
+			path = ../libKwaiSDK;
+			sourceTree = "<group>";
+		};
+		B9E6793D2546D5C300804148 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				B9E6793E2546D5C300804148 /* libKwaiSDK.a */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		B9E679402546D5C300804148 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B9E679412546D5C300804148 /* KSApiObject.h */,
+				B9E679422546D5C300804148 /* KSApi.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		BE5FC05DF3DECE07C6CE71BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C31D11E2CBE760FB49E778C2 /* Pods_KwaiOpenSDKDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2566620D89791F19E449A48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB6A58C8F0BEAE24E171EAF5 /* Pods-KwaiOpenSDKDemo.debug.xcconfig */,
+				4FDDE7C98529F96C525DA49C /* Pods-KwaiOpenSDKDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B92D12362446ECF00072DD17 /* KwaiOpenSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B92D124B2446ECF00072DD17 /* Build configuration list for PBXNativeTarget "KwaiOpenSDKDemo" */;
+			buildPhases = (
+				51D63AC7575A4904E19114BA /* [CP] Check Pods Manifest.lock */,
+				B92D12332446ECF00072DD17 /* Sources */,
+				B92D12342446ECF00072DD17 /* Frameworks */,
+				B92D12352446ECF00072DD17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KwaiOpenSDKDemo;
+			productName = KwaiOpenSDKDemo;
+			productReference = B92D12372446ECF00072DD17 /* KwaiOpenSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B92D122F2446ECF00072DD17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "MingBo Gao";
+				TargetAttributes = {
+					B92D12362446ECF00072DD17 = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = B92D12322446ECF00072DD17 /* Build configuration list for PBXProject "KwaiOpenSDKDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B92D122E2446ECF00072DD17;
+			productRefGroup = B92D12382446ECF00072DD17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B92D12362446ECF00072DD17 /* KwaiOpenSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B92D12352446ECF00072DD17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E679452546D5C300804148 /* source.txt in Resources */,
+				B92D12472446ECF00072DD17 /* LaunchScreen.storyboard in Resources */,
+				B92D12442446ECF00072DD17 /* Assets.xcassets in Resources */,
+				B9E679432546D5C300804148 /* KwaiSDK.podspec.json in Resources */,
+				B92D12422446ECF00072DD17 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51D63AC7575A4904E19114BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KwaiOpenSDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B92D12332446ECF00072DD17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9CDF150246D827200EA7F4F /* KSShareApiMeidaViewController.swift in Sources */,
+				B94B44C42530622C0056AC3A /* KSConfigCenter.swift in Sources */,
+				B9CDF14A246D78F800EA7F4F /* KSShareApiMessageManager.swift in Sources */,
+				B92D12572446EE620072DD17 /* KSShareApiManager.swift in Sources */,
+				B92D123F2446ECF00072DD17 /* ViewController.swift in Sources */,
+				B92D123B2446ECF00072DD17 /* AppDelegate.swift in Sources */,
+				B92D123D2446ECF00072DD17 /* SceneDelegate.swift in Sources */,
+				B9CDF14D246D7C7300EA7F4F /* KSShareApiProfileManager.swift in Sources */,
+				B92D125C2446F0BE0072DD17 /* KSShareApiAuthManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B92D12402446ECF00072DD17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D12412446ECF00072DD17 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B92D12452446ECF00072DD17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D12462446ECF00072DD17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B92D12492446ECF00072DD17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		B92D124A2446ECF00072DD17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B92D124C2446ECF00072DD17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB6A58C8F0BEAE24E171EAF5 /* Pods-KwaiOpenSDKDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KwaiOpenSDKDemo/KwaiOpenSDKDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MW76NQM8LG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KwaiOpenSDKDemo",
+					"$(PROJECT_DIR)/Pods/KwaiSDK/libKwaiSDK/ios",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/KwaiSDK/libKwaiSDK/Headers",
+				);
+				INFOPLIST_FILE = KwaiOpenSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libKwaiSDK/ios",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kwai.kwaiSDK.beta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KwaiOpenSDKDemo/KwaiOpenSDKDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B92D124D2446ECF00072DD17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FDDE7C98529F96C525DA49C /* Pods-KwaiOpenSDKDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KwaiOpenSDKDemo/KwaiOpenSDKDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MW76NQM8LG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KwaiOpenSDKDemo",
+					"$(PROJECT_DIR)/Pods/KwaiSDK/libKwaiSDK/ios",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/KwaiSDK/libKwaiSDK/Headers",
+				);
+				INFOPLIST_FILE = KwaiOpenSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libKwaiSDK/ios",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kwai.kwaiSDK.beta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KwaiOpenSDKDemo/KwaiOpenSDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B92D12322446ECF00072DD17 /* Build configuration list for PBXProject "KwaiOpenSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92D12492446ECF00072DD17 /* Debug */,
+				B92D124A2446ECF00072DD17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B92D124B2446ECF00072DD17 /* Build configuration list for PBXNativeTarget "KwaiOpenSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92D124C2446ECF00072DD17 /* Debug */,
+				B92D124D2446ECF00072DD17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B92D122F2446ECF00072DD17 /* Project object */;
+}
