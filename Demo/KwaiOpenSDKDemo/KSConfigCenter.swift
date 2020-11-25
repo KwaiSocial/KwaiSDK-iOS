@@ -9,7 +9,6 @@
 import Foundation
 
 class KSConfigCenter {
-    static let appId = "your app Id"
-    static let universalLink = "your universal link"
-    
+    static let appId = "ks716916767185390425"
+    static let universalLink = "https://doc.game.kuaishou.com/"
 }

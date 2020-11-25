@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
     @IBOutlet weak var sdkVersionLable: UILabel!
     @IBOutlet weak var appIdLabel: UILabel!
@@ -44,4 +43,15 @@ class ViewController: UIViewController {
     @IBAction func jumpProfileTapped(_ sender: Any) {
         KSShareApiManager.shared.profile()
     }
+    
+    @IBAction func exportSettingTapped(_ sender: Any) {
+        var params: [String : Any] = [:]
+        params["sdkVersion"] = KSApi.apiVersion()
+        params["appId"] = KSConfigCenter.appId
+        params["universalLinks"] = KSConfigCenter.universalLink
+        params["bundleId"] = Bundle.main.bundleIdentifier
+        params["QueriesSchemes"] = Bundle.main.infoDictionary!["LSApplicationQueriesSchemes"]
+        UIPasteboard.general.string = "\(params)"
+    }
 }
+

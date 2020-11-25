@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:put.your.universallink.com</string>
+		<string>applinks:doc.game.kuaishou.com</string>
 	</array>
 </dict>
 </plist>
