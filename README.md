@@ -153,8 +153,7 @@ SceneDelegate:
 
 ```objc
     KSAuthRequest *req = [[KSAuthRequest alloc] init];
-    req.authType = @"code";
-    req.scope = @"user_info,relation";
+    req.scope = @"user_info";
     req.h5AuthViewController = YOURE_VC;
     [KSApi sendRequest:req completion:nil];
 ```
