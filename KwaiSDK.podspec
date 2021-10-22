@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "KwaiSDK"
-    s.version          = "3.6.4"
+    s.version          = "3.6.5"
     s.summary          = "Kwai Open SDK"
     s.homepage         = "https://github.com/KwaiSocial/KwaiSDK-iOS"
     s.author           = { "gaomingbo" => "gaomingbo@kuaishou.com" }
