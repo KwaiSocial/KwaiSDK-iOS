@@ -2,11 +2,18 @@
 
 ## 介绍
 
-快手开发平台SDK提供了第三方app跳转到快手终端进行交互的能力，其中包括快手登陆授权，分享私信、视频、图片到快手，跳转指定用户个人主页等功能。
+快手开放平台SDK提供了第三方app跳转到快手终端进行交互的能力，其中包括快手登陆授权、分享私信、视频、图片到快手，跳转指定用户个人主页等功能。
 
 
 
 ## 接入指南
+
+假定当前待接入应用信息为:     
+网站域名: https://your.app.com/   
+应用 TeamId:  8P7343TG54  
+应用 Bundle Identifier: com.company.app  
+应用 快手appId: ks685673047210945076   
+
 
 ### 1.配置您应用的UniversalLinks
 
@@ -18,18 +25,27 @@
 
 并且配置到快手的Universal Links需要以"/"结尾，便于快手SDK拼接参数能够正常完成跳转。
 
-示例:
-
+apple-app-site-association内容示例:  
 ```json
-{ 
-"appID": "8P7343TG54.com.kuaishou.game.SDKSample",    
-"paths": ["/sdksample/*"]
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "8P7343TG54.com.company.app",    
+                "paths": ["/specialPath/*"]
+            },
+            {
+                "appID": "8P7343TG54.com.company.app2",
+                "paths": [ "*","/app2/*" ]
+            },
+        ]
+    }
 }
 ```
 
 #### **2）打开Associated Domains开关，将Universal Links域名加到配置上**
-
-![image](https://user-images.githubusercontent.com/62368093/82444779-53554f00-9ad6-11ea-970a-46c4e3d55b68.png)
+![image](./ReadMeImages/associated_domains.png)
 
 #### **3）验证您的Universal Links是否生效**
 
@@ -37,27 +53,27 @@ Safari输入Universal Links(包括完整路径)+随机字符串(例如: abc)
 
 举例：
 
-配置到快手的Universal Links如下
+根据您网站apple-app-site-association文件所示, 快手网站注册及代码中使用的Universal Links应为  
 
 ```tex
-https://kuaishou.com/sdksample/
+https://your.app.com/specialPath/
 ```
 
-测试输入Safari的Universal Links：
+Safari输入以下url进行测试:
 
 ```tex
-https://kuaishou.com/sdksample/abc
+https://your.app.com/specialPath/abc
 ```
 
-检查下拉页面检查是否有打开app的入口提示
-
+检查是否存在跳转提示或可直接跳转至您的App
+  
 ### 2.向快手注册您的应用id和Universal Links
 
-详见https://docs.qq.com/doc/DRndDUmJldkNNQWNa
+请前往快手开放平台 https://open.kuaishou.com 进行自助注册    
+[如何进行应用注册](https://open.kuaishou.com/platform/openApi?group=GROUP_OPEN_PLATFORM&menu=7)  
+申请成功后，得到 AppId 和 AppSecret, 客户端接入只需要 AppId, 服务器同时需要AppId 和 AppSecret。  
 
-申请成功后，得到 AppId 和 AppSecret, 客户端接入只需要 AppId , 服务器同时需要 AppId 和 AppSecret。
-
-
+   
 
 ### 3.搭建开发环境
 
@@ -66,7 +82,7 @@ https://kuaishou.com/sdksample/abc
 ##### (1)通过cocoapods集成
 
 ```ruby
-pod 'KwaiSDK' ,'3.6.2'
+pod 'KwaiSDK'
 ```
 
 ##### (2)手动集成
@@ -154,7 +170,7 @@ SceneDelegate:
 ```objc
     KSAuthRequest *req = [[KSAuthRequest alloc] init];
     req.scope = @"user_info";
-    req.h5AuthViewController = YOURE_VC;
+    req.h5AuthViewController = YOUR_VC;
     [KSApi sendRequest:req completion:nil];
 ```
 
