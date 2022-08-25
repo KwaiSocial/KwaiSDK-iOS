@@ -45,7 +45,7 @@ apple-app-site-association内容示例:
 ```
 
 #### **2）打开Associated Domains开关，将Universal Links域名加到配置上**
-![image](./ReadMeImages/associated_domains.png)
+![image](./Example/ReadMeImages/associated_domains.png)
 
 #### **3）验证您的Universal Links是否生效**
 
