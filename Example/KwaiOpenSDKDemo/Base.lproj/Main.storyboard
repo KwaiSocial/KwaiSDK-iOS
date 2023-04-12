@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -293,7 +293,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HwZ-Y3-pNI">
-                                <rect key="frame" x="10" y="44" width="394" height="335"/>
+                                <rect key="frame" x="10" y="48" width="394" height="380"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快手分享SDK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnu-lU-kfx">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="36"/>
@@ -385,19 +385,36 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8i-0g-7De">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="DXT-O7-0oL">
                                         <rect key="frame" x="0.0" y="245" width="394" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOm-8z-a0O">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="pRr-74-yKh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="第四步 添加关联信息"/>
+                                                <connections>
+                                                    <action selector="didTouchAddAssociateInfo:" destination="zSN-5X-twC" eventType="touchUpInside" id="8mZ-58-wuW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8i-0g-7De">
+                                        <rect key="frame" x="0.0" y="290" width="394" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="a9N-G8-rhC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="第四步 分享"/>
+                                        <state key="normal" title="第五步 分享"/>
                                         <connections>
                                             <action selector="didTouchShareStep" destination="zSN-5X-twC" eventType="touchUpInside" id="mM4-TA-gU7"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-1c-Ejx">
-                                        <rect key="frame" x="0.0" y="290" width="394" height="45"/>
+                                        <rect key="frame" x="0.0" y="335" width="394" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3c-D8-ujO">
                                                 <rect key="frame" x="0.0" y="0.0" width="158.5" height="45"/>
@@ -433,6 +450,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="associateButton" destination="BOm-8z-a0O" id="O6y-oi-5Q0"/>
                         <outlet property="chooseThumbnail" destination="rUH-aV-dJZ" id="s0G-L8-Otw"/>
                         <outlet property="currentChooseLabel" destination="wSB-Jy-JgX" id="YRD-xI-xwH"/>
                         <outlet property="disableFallbackSwitch" destination="U3f-XG-bFP" id="URw-oN-xzh"/>

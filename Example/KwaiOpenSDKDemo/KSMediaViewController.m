@@ -36,6 +36,7 @@
 @property (nonatomic, weak) IBOutlet UIButton *shareButton;
 
 @property (nonatomic, weak) IBOutlet UISwitch *disableFallbackSwitch;
+@property (nonatomic, weak) IBOutlet UIButton *associateButton;
 
 @property (nonatomic, strong) KSShareMedia *shareMedia;
 
@@ -210,6 +211,44 @@
     }];
 }
 
+- (IBAction)didTouchAddAssociateInfo:(id)sender {
+    
+    __block UITextField *titleTF;
+    __block UITextField *appIdTF;
+    __block UITextField *pathTF;
+    __weak __typeof(self) ws = self;
+    [self showEditAlert:@"添加关联信息" message:nil configHandlers:@[
+        ^ (UITextField *textField)
+          {
+        textField.placeholder = @"title";
+        titleTF = textField;
+    },
+          ^ (UITextField *textField)
+          {
+        textField.placeholder = @"appId";
+        appIdTF = textField;
+    },
+          ^ (UITextField *textField)
+          {
+        textField.placeholder = @"path";
+        pathTF = textField;
+    },
+    ] cancelHandler:^(UIAlertAction *action) {
+        
+        
+    } actions:@{
+        @"确认":^(UIAlertAction *action) {
+        __strong __typeof(ws) ss = ws;
+        KSMediaAssociateKWAppObject *object = [[KSMediaAssociateKWAppObject alloc] init];
+        object.title = titleTF.text;
+        object.kWAppId = appIdTF.text;
+        object.kWAppPath = pathTF.text;
+        ss.shareMedia.associateType = KSMediaAssociateKWApp;
+        ss.shareMedia.associateObject = object;
+      },
+    }];
+}
+
 - (IBAction)didTouchShareStep {
     __weak __typeof(self) ws = self;
     self.shareMedia.disableFallback = self.disableFallbackSwitch.isOn;
@@ -332,6 +371,27 @@
     [actions enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, void (^ _Nonnull obj)(UIAlertAction *), BOOL * _Nonnull stop) {
         [alertController addAction:[UIAlertAction actionWithTitle:key style:UIAlertActionStyleDefault handler:obj]];
     }];
+    if (cancelHandler != nil) {
+        [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:cancelHandler]];
+    }
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)showEditAlert:(NSString *)title
+              message:(NSString *)message
+       configHandlers:(NSArray<void (^)(UITextField *textField)> *)configHandlers
+        cancelHandler:(void (^)(UIAlertAction *action))cancelHandler
+              actions:(NSDictionary<NSString *, void (^)(UIAlertAction *action)> *)actions {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    [configHandlers enumerateObjectsUsingBlock:^(void (^ _Nonnull obj)(UITextField *), NSUInteger idx, BOOL * _Nonnull stop) {
+        [alertController addTextFieldWithConfigurationHandler:obj];
+    }];
+    
+    [actions enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, void (^ _Nonnull obj)(UIAlertAction *), BOOL * _Nonnull stop) {
+        [alertController addAction:[UIAlertAction actionWithTitle:key style:UIAlertActionStyleDefault handler:obj]];
+    }];
+    
     if (cancelHandler != nil) {
         [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:cancelHandler]];
     }

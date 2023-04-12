@@ -12,26 +12,26 @@
 
 @implementation KSOpenApiManager (Media)
 
-- (void)shareFeature:(KSShareMediaFeature)feature
-          shareItems:(NSArray<KSShareMediaAsset *> *)shareItems
-           thumbnail:(KSShareMediaAsset *)thumbnail
-                tags:(NSArray<NSString *> *)tags
-         extraEntity:(NSDictionary *)extraEntity
-     disableFallback:(BOOL)disableFallback
-          completion:(void(^)(BOOL))completion {
+- (void)shareMedia:(KSShareMedia *)shareMedia
+        shareItems:(NSArray<KSShareMediaAsset *> *)shareItems
+         thumbnail:(KSShareMediaAsset *)thumbnail
+        completion:(void (^)(BOOL))completion {
        
     KSShareMediaObject *mediaItem = [[KSShareMediaObject alloc] init];
     //建议为NO, 即执行兜底逻辑，无相关发布权限时进入预裁剪页
-    mediaItem.disableFallback = disableFallback;
-    mediaItem.extraEntity = extraEntity;
-    mediaItem.tags = tags;
+    mediaItem.disableFallback = shareMedia.disableFallback;
+    mediaItem.extraEntity = shareMedia.extraEntity;
+    mediaItem.tags = shareMedia.tags;
     
     mediaItem.coverAsset = thumbnail;
     mediaItem.multipartAssets = shareItems;
+    
+    mediaItem.associateType = shareMedia.associateType;
+    mediaItem.associateObject = shareMedia.associateObject;
         
     KSShareMediaRequest *request = [[KSShareMediaRequest alloc] init];
     request.applicationList = [self.applicationList copy];
-    request.mediaFeature = feature;
+    request.mediaFeature = shareMedia.feature;
     request.mediaObject = mediaItem;
     __weak __typeof(self) ws = self;
     [KSApi sendRequest:request completion:^(BOOL success) {
@@ -75,13 +75,7 @@
     }
     KSShareMediaAsset *thumbnailItem = [KSShareMediaAsset assetForPhotoLibrary:self.thumbnail.localIdentifier isImage:YES];
 
-    [[KSOpenApiManager shared] shareFeature:self.feature
-                                 shareItems:shareItems
-                                  thumbnail:thumbnailItem
-                                       tags:self.tags
-                                extraEntity:self.extraEntity
-                            disableFallback:self.disableFallback
-                                 completion:completion];
+    [[KSOpenApiManager shared] shareMedia:self shareItems:shareItems thumbnail:thumbnailItem completion:completion];
 }
 
 #pragma mark -

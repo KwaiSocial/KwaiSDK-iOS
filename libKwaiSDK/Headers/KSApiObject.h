@@ -62,6 +62,11 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
     KSApiApplication_KwaiLite,
 };
 
+typedef NS_ENUM(NSInteger, KSMediaAssociateType) {
+    KSMediaAssociateNone = 0,
+    KSMediaAssociateKWApp,
+};
+
 #pragma mark -KSBase
 
 /// 该类为快手终端SDK所有请求类的基类
@@ -181,6 +186,25 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
 
 @end
 
+@interface KSMediaAssociateObject : NSObject
+
+/// 关联资源的标题
+@property (nonatomic, copy) NSString *title;
+
+@end
+
+/// 关联小程序的信息
+@interface KSMediaAssociateKWAppObject : KSMediaAssociateObject
+
+/// 挂载的小程序的app_id
+/// 需满足：1.存在且为小程序类型 2.已在小程序平台中把当前用户id配置到“可发布当前小程序挂件”的用户白名单中
+@property (nonatomic, copy) NSString *kWAppId;
+
+/// 小程序组件跳转到的小程序页面路径
+@property (nonatomic, copy) NSString *kWAppPath;
+
+@end
+
 /// 分享媒体对象
 @interface KSShareMediaObject: NSObject
 
@@ -196,6 +220,12 @@ typedef NS_ENUM(NSInteger, KSApiApplication) {
 
 /// 分段媒体资源
 @property (nonatomic, copy) NSArray<KSShareMediaAsset *> *multipartAssets;
+
+/// 关联资源类型
+@property (nonatomic, assign) KSMediaAssociateType associateType;
+
+/// 关联资源的信息
+@property (nonatomic, strong) KSMediaAssociateObject *associateObject;
 
 /// 第三方媒体相关扩展信息，该能力需要申请权限
 @property (nonatomic, copy, nullable) NSDictionary *extraEntity;

@@ -16,15 +16,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class KSShareMedia;
+
 @interface KSOpenApiManager (Media)
 
-- (void)shareFeature:(KSShareMediaFeature)feature
-          shareItems:(NSArray<KSShareMediaAsset *> *)shareItems
-           thumbnail:(KSShareMediaAsset *)thumbnail
-                tags:(NSArray<NSString *> *)tags
-         extraEntity:(NSDictionary *)extraEntity
-     disableFallback:(BOOL)disableFallback
-          completion:(void(^)(BOOL))completion;
+- (void)shareMedia:(KSShareMedia *)shareMedia
+        shareItems:(NSArray<KSShareMediaAsset *> *)shareItems
+         thumbnail:(KSShareMediaAsset *)thumbnail
+        completion:(void(^)(BOOL))completion;
 
 @end
 
@@ -40,6 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
 // NOTE: 首次测试不要填充, 涉及权限，有可能失败
 @property (nonatomic, strong) NSMutableArray<NSString *> *tags;
 @property (nonatomic, strong) NSMutableDictionary *extraEntity;
+
+@property (nonatomic, assign) KSMediaAssociateType associateType;
+@property (nonatomic, strong) KSMediaAssociateObject *associateObject;
 
 - (void)share:(void(^)(BOOL))completion;
 
