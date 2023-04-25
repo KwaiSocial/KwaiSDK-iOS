@@ -264,9 +264,9 @@ request.mediaObject = object;
 目前mediaFeature支持了不同能生产页面跳转功能。
 ```objc
 KSShareMediaFeature_Preprocess   = 0,       ///< 裁剪功能
-KSShareMediaFeature_VideoEdit    = 1,       ///< 视频编辑功能
+KSShareMediaFeature_VideoEdit    = 1,       ///< 视频编辑功能，该能力需要申请权限
 KSShareMediaFeature_PictureEdit  = 2,       ///< 图片编辑功能
-KSShareMediaFeature_VideoPublish = 3,       ///< 视频发布功能
+KSShareMediaFeature_VideoPublish = 3,       ///< 视频发布功能，该能力需要申请权限
 KSShareMediaFeature_AICut        = 4,       ///< 智能裁剪功能
 ```
 
