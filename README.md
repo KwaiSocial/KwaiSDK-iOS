@@ -13,7 +13,10 @@
 # 二、项目地址库
 
 准备工作
-开发者需要在快手开放平台完成注册，新建一个网站应用，并获取应用标识appId 和 appSecret，详细参考[申请注册流程](https://open.kuaishou.com/platform/openApi?menu=7)，官网地址：https://open.kuaishou.com/platform
+开发者需要在快手开放平台完成注册，新建一个网站应用，并获取应用标识appId 和 appSecret，详细参考[申请注册流程](https://open.kuaishou.com/platform/openApi?menu=7)，
+
+官网地址：https://open.kuaishou.com/platform
+
 demo地址：https://github.com/KwaiSocial/KwaiSDK-iOS
 
 # 三、接入说明
@@ -85,7 +88,7 @@ https://your.app.com/sdksample/abc
 #### (1) 通过cocoapods集成
 
 ```ruby
-pod 'KwaiSDK' ,'3.7.1.11'
+pod 'KwaiSDK' ,'3.7.1'
 ```
 
 #### (2) 手动集成
