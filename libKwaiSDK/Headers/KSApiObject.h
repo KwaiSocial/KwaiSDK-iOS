@@ -103,8 +103,12 @@ typedef NS_ENUM(NSInteger, KSMediaAssociateType) {
 /// 第三方程序向快手终端请求认证的消息结构
 @interface KSAuthRequest : KSBaseRequest
 
-/// 需要获得的权限，多个用“,”链接。比如user_info,relation等
-@property (nonatomic, copy) NSString *scope;
+/// 需要获得的必选权限，多个用“,”链接。比如user_info,relation等
+@property (nonatomic, copy) NSString *requiredScope;
+/// 可选权限，默认不勾选
+@property (nonatomic, copy) NSString *optionalScope0;
+/// 可选权限，默认勾选
+@property (nonatomic, copy) NSString *optionalScope1;
 
 /// 当用户设备没有安装快手终端，可以采用sdk内置的h5页面进行授权
 /// 若为空，则不会采用h5授权

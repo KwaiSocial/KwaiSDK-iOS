@@ -4,7 +4,7 @@ use_frameworks!
 
 target 'KwaiOpenSDKDemo' do
   
-  pod 'KwaiSDK' ,'3.7.1'
+  pod 'KwaiSDK' ,'3.7.3'
   pod 'CTAssetsPickerController', '~> 3.3.2-alpha'
   
 end

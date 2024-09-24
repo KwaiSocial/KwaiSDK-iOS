@@ -85,6 +85,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @return 成功返回YES，失败返回NO
 + (BOOL)handleOpenUniversalLink:(NSUserActivity *)userActivity;
 
+/// 针对swiftUI应用，处理快手通过UniversalLink方式唤起第三方应用时传递的数据
+/// 需要在onOpenURL中调用
+/// @param url 快手唤起第三方应用时系统API传递过来的URL对象
+/// @return 成功返回YES，失败返回NO
++ (BOOL)handleOpenUniversalLinkURL:(NSURL *)url;
+
 /// 日志打印方法
 /// @param level 打印log级别
 /// @param logDelegate log代理对象

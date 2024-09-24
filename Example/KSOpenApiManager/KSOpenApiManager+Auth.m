@@ -13,7 +13,7 @@
 
 - (void)loginWithoutH5 {
     KSAuthRequest *req = [[KSAuthRequest alloc] init];
-    req.scope = @"user_info";
+    req.requiredScope = @"user_info";
     req.applicationList = [self.applicationList copy];
     
     __weak __typeof(self) ws = self;
@@ -25,7 +25,7 @@
 
 - (void)loginWithH5Container:(UIViewController *)h5Controller {
     KSAuthRequest *req = [[KSAuthRequest alloc] init];
-    req.scope = @"user_info";
+    req.requiredScope = @"user_info";
     req.applicationList = [self.applicationList copy];
     req.h5AuthViewController = h5Controller;
     
